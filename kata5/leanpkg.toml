@@ -1,0 +1,8 @@
+[package]
+name = "kata"
+version = "0.1"
+lean_version = "3.5.1"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover/mathlib", rev = "4299a801f21d8a2ee7082f521bebadbf98ade1a8"}
