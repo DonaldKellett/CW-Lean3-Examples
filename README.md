@@ -1,12 +1,12 @@
 # CW Lean3 Setup Example
 
-An example of how Lean3 v3.7.2 support could be added to Codewars
+An example of how Lean v3.18.4 support could be added to Codewars
 
 ## Initial Setup
 
 1. Install [`elan`](https://github.com/Kha/elan)
 2. Run `pip3 install mathlibtools`, with `sudo` if necessary
-3. Run `leanproject new kata`. This automatically creates a Lean3 project in `kata/` with the latest Lean3 community version (3.7.2 at the time of writing) and the corresponding pre-compiled mathlib
+3. Run `leanproject new kata`. This automatically creates a Lean3 project in `kata/` with the latest Lean3 community version (3.18.4 at the time of writing) and the corresponding pre-compiled mathlib
 4. Run `cd kata/` and create a `main.js` file as in this repo
 5. Run `cd src/` and populate the directory with `.lean` files
 
@@ -82,3 +82,16 @@ An example of how Lean3 v3.7.2 support could be added to Codewars
 - `kata3` - Solution uses all three core axioms, resulting in a passed test
 - `kata4` - Solution uses no axioms at all, resulting in a passed test
 - `kata5` - Solution contains forbidden axioms `1 + 1 = 3` and `2 + 2 = 5`, resulting in a failed test
+
+## `leanpkg.toml`
+
+```toml
+[package]
+name = "kata"
+version = "0.1"
+lean_version = "leanprover-community/lean:3.18.4"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "78655b6eef558ccb36772934ed98ed83d9a56802"}
+```

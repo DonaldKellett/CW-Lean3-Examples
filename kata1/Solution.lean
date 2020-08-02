@@ -1,4 +1,4 @@
-import Preloaded
+import Preloaded tactic
 open classical
 
 -- Task 1: Prove that n + m = n + m
