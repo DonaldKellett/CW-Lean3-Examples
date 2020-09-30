@@ -1,16 +1,15 @@
 # CW Lean3 Setup Example
 
-An example of how Lean v3.18.4 support could be added to Codewars
+An example of how Lean v3.20.0 support could be added to Codewars
 
 ## Initial Setup
 
-1. Install [`elan`](https://github.com/Kha/elan)
-2. Run `pip3 install mathlibtools`, with `sudo` if necessary
-3. Run `leanproject new kata`. This automatically creates a Lean3 project in `kata/` with the latest Lean3 community version (3.18.4 at the time of writing) and the corresponding pre-compiled mathlib
-4. Run `cd kata/` and create a `main.js` file as in this repo
-5. Run `cd src/` and populate the directory with `.lean` files
+1. Install the complete Lean ecosystem by following the [instructions provided by the Lean community](https://leanprover-community.github.io/get_started.html)
+1. Run `leanproject new kata`. This automatically creates a Lean3 project in `kata` with the latest Lean3 community version (3.20.0 at the time of writing) and the corresponding pre-compiled mathlib
+1. Run `cd kata` and create a `main.js` file as in this repo
+1. Run `cd src` and populate the directory with `.lean` files
 
-## Proposed Workflow
+## Workflow
 
 1. Write a definitions file `Preloaded.lean` with the following format:
 
@@ -73,7 +72,7 @@ An example of how Lean v3.18.4 support could be added to Codewars
   theorem task_n : TASK_n := proof_of_statement_n
   #print axioms task_n
   ```
-4. On "Run Sample Tests" / "Attempt", run `cd ..; node main.js; cd src/`
+4. On "Run Sample Tests" / "Attempt", run `cd ..; node main.js; cd src`
 
 ## Examples
 
@@ -89,9 +88,9 @@ An example of how Lean v3.18.4 support could be added to Codewars
 [package]
 name = "kata"
 version = "0.1"
-lean_version = "leanprover-community/lean:3.18.4"
+lean_version = "leanprover-community/lean:3.20.0"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "78655b6eef558ccb36772934ed98ed83d9a56802"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "da66bb81bf0466335bae82077f0c335dfe53aeb3"}
 ```

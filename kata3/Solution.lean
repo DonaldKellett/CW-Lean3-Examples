@@ -1,5 +1,4 @@
 import Preloaded tactic
-open classical
 
 -- Task 1: Prove that n + m = n + m
 theorem immediate : ∀ n m : ℕ, n + m = n + m :=
