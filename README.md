@@ -81,6 +81,7 @@ An example of how Lean v3.20.0 support could be added to Codewars
 - `kata3` - Solution uses all three core axioms, resulting in a passed test
 - `kata4` - Solution uses no axioms at all, resulting in a passed test
 - `kata5` - Solution contains forbidden axioms `1 + 1 = 3` and `2 + 2 = 5`, resulting in a failed test
+- `kata6` - Minimal example involving mathlib
 
 ## `leanpkg.toml`
 
@@ -92,5 +93,5 @@ lean_version = "leanprover-community/lean:3.20.0"
 path = "src"
 
 [dependencies]
-mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "da66bb81bf0466335bae82077f0c335dfe53aeb3"}
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "c3d08357326c73fa7f1e3c5a703c585f3dce7f07"}
 ```
